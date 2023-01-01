@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push:
+    paths:
+      - .gitmodules
+      - .github/workflows/build.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: build packages
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: test
+        shell: bash
+        run: |
+          pwd
+          ls *

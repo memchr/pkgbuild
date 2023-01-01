@@ -1,0 +1,3 @@
+[submodule "dosbox-staging"]
+	path = dosbox-staging
+	url = https://aur.archlinux.org/dosbox-staging.git
