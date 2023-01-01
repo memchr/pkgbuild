@@ -19,7 +19,6 @@ jobs:
           submodules: true
 
       - name: build packages
-        uses: 2m/arch-pkgbuild-builder@v1.16
+        uses: zjuyk/pkgbuild-aur@master
         with:
-          target: pkgbuild
-          pkgname: dosbox-staging
+          pkg-name: dosbox-staging
