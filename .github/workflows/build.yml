@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: build packages
+    name: build job
     
     steps:
       - name: checkout
@@ -18,9 +18,8 @@ jobs:
         with:
           submodules: true
 
-      - name: test
-        shell: bash
-        run: |
-          pwd
-          ls -al
-          tree
+      - name: build packages
+        uses: 2m/arch-pkgbuild-builder@v1.16
+        with:
+          target: pkgbuild
+          pkgname: dosbox-staging
