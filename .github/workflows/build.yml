@@ -22,4 +22,5 @@ jobs:
         shell: bash
         run: |
           pwd
-          ls *
+          ls 
+          tree
